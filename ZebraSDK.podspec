@@ -1,43 +1,23 @@
-#
-# Be sure to run `pod lib lint ZebraSDK.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'ZebraSDK'
-  s.version          = '0.7.0'
+  s.version          = '1.5.1049'
   s.summary          = 'Link-OS Multiplatform SDK'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-Zebra's Link-OS Multiplatform SDK
-                       DESC
+  Zebra's Link-OS Multiplatform SDK
+  DESC
 
-  s.homepage         = 'https://github.com/ImTung/zebra-link-os-ios'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'toilatung' => 'toilatung@icloud.com' }
-  s.source           = { :git => 'https://github.com/ImTung/zebra-link-os-ios.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/toilatung'
+  s.homepage         = 'http://www.zebra.com/link'
+  s.license          = 'MIT'
+  s.author           = 'Zebra'
+  s.source           = { :git => 'https://github.com/djbe/zebra-link-os-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'ZebraSDK/Classes/**/*'
-  s.public_header_files = 'ZebraSDK/Classes/**/*.h'
+  s.static_framework = true
+  s.platform = :ios
   
-  # s.resource_bundles = {
-  #   'ZebraSDK' => ['ZebraSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.ios.deployment_target = '8.0'
+  s.ios.frameworks = 'ExternalAccessory'
+  s.ios.source_files = 'ZebraSDK/include/**/*'
+  s.ios.public_header_files = 'ZebraSDK/include/**/*.h'
+  s.ios.vendored_libraries = 'ZebraSDK/libZSDK_API.a'
 end

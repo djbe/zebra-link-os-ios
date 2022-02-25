@@ -10,8 +10,8 @@ pod 'ZebraSDK'
 
 ## Author
 
-toilatung@icloud.com
+Zebra: http://www.zebra.com/link
 
 ## License
 
-ZebraSDK is available under the MIT license. See the LICENSE file for more info.
+Zebra Link-OS SDK is owned by Zebra.
